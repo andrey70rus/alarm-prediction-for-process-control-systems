@@ -1,4 +1,3 @@
-from keras.datasets import boston_housing
 from keras.models import Sequential
 from keras.layers import Dense
 
@@ -32,8 +31,8 @@ model.fit(in_data_train, out_data_train, epochs=5, batch_size=1, verbose=2)
 # Проверка корректности предсказания
 pred = model.predict(in_data_test)
 
-# for i in range (0,len(pred)):
-#     print("Прогнозируемое значение:", pred[i][0])
+for i in range (0,len(pred)):
+    print("Прогнозируемое значение:", pred[i][0])
 
-# frame = pd.DataFrame(pred)
-# frame.to_csv('out_test22.csv', index=False)
+frame = pd.DataFrame(pred)
+frame.to_csv('out_test22.csv', index=False)

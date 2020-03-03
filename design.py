@@ -1,4 +1,4 @@
-
+from os import path
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui
 import numpy as np
@@ -39,8 +39,6 @@ def updateViews():
     global p1, p2, p3
     p2.setGeometry(p1.vb.sceneBoundingRect())
     p3.setGeometry(p1.vb.sceneBoundingRect())
-
-
 
 
 updateViews()
